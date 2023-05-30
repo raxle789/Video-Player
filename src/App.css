@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
+.app-header {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 3px #F1FFB9;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  display: inline;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 33px;
+  color: #D6FB41;
+  margin-left: 3%;
+  margin-top: 14px;
+  margin-bottom: 16px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.video-title-container {
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+  margin-left: 65%;
+  padding: 3px 11px;
+  border-radius: 5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.video-title {
+  margin: 0px;
+  display: inline;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  color: #151A1E;
+  margin-right: 8px;
+  width: 130px;
+}
+.cassette {
+  width: 30px;
+}
+.gradient1 {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, #1B1B1B 0%, #1B1B1B 44.01%, #1B1B1B 59.89%, rgba(27, 27, 27, 0.4) 83.85%, rgba(27, 27, 27, 0) 96.35%);
+  position: absolute;
+  top: 10vh;
+  z-index: -1;
+}
+.background {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 17vh;
+  left: -4px;
+  z-index: -2;
+}
+.gradient2 {
+  width: 100%;
+  height: calc(100vh - 18vh);
+  background: linear-gradient(180deg, rgba(21, 26, 30, 0.49) 0%, rgba(21, 26, 30, 0.63) 81.91%, rgba(21, 26, 30, 0.87) 90.14%, rgba(21, 26, 30, 0.97) 100%);
+  position: absolute;
+  top: 18vh;
+  z-index: -1;
+}
+main {
+  margin-top: 28vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.left-main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.right-main {
+  margin-top: -18px;
+  margin-left: -35px;
+}
+.desc1 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 33px;
+  color: #AFC35C;
+}
+.desc2 {
+  margin-top: -18px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 33px;
+  color: #F1FFB9;
+}
+.upload-container {
+  background-color: #fff;
+  width: 175px;
+  cursor: pointer;
+  padding-left: 13px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 8px;
+}
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input-btn {
+  display: none;
+}
+.upload-icon {
+  display: inline;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.upload-label {
+  display: inline;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  color: #151A1E;
+  padding-top: -15px;
+  margin-left: 11px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.video-player-wrapper {
+  width: 490px;
+  height: 280px;
+}
+.video-player-container {
+  width: 100%;
+  height: 100%;
+}
+.video-player {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 301px) and (max-width: 630px){
+  .app-header {
+    display: flex;
+    justify-content: space-between;
   }
-  to {
-    transform: rotate(360deg);
+  .logo {
+    margin-left: 3vh;
+    font-size: 24px;
+  }
+  .video-title-container {
+    margin: 0px;
+    margin-right: 3vh;
+    width: 160px;
+  }
+  .video-title {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .cassette {
+    width: 25px;
+  }
+  main {
+    margin-top: 14vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-main {
+    margin: 0;
+    margin-bottom: 18vh;
+  }
+  .right-main {
+    margin: 0;
+  }
+  .upload-container {
+    width: 167px;
+  }
+  .desc1 {
+    font-size: 28px;
+  }
+  .desc2 {
+    font-size: 28px;
+  }
+  .upload-icon {
+    margin: 0;
+    width: 26px;
+    height: auto;
+  }
+  .upload-label {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  .video-player-wrapper {
+    width: 80vw;
+    height: 23vh;
+  }
+  .background {
+    top: 13vh;
+    object-fit: cover;
+    height: 79vh;
+  }
+  .gradient1 {
+    height: 100px;
+    top: 7vh;
+  }
+  .gradient2 {
+    height: calc(100vh - 20vh);
+    background: linear-gradient(180deg, rgba(21, 26, 30, 0.64) 0%, rgba(21, 26, 30, 0.65) 81.91%, rgba(21, 26, 30, 0.87) 90.14%, rgba(21, 26, 30, 0.97) 100%);
+    top: 13vh;
   }
 }
