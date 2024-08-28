@@ -233,7 +233,7 @@ label {
   }
 }
 
-@media screen and (min-width: 631px) and (max-width: 990px) {
+@media screen and (min-width: 631px) and (max-width: 1000px) {
   .app-header {
     display: flex;
     justify-content: space-between;
@@ -273,5 +273,24 @@ label {
       rgba(21, 26, 30, 0.97) 100%
     );
     top: 13vh;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1279px) {
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .video-title-container {
+    margin-left: 0px;
+    margin-right: 2%;
+  }
+  .background {
+    object-fit: cover;
+    height: 89vh;
+  }
+  .gradient1 {
+    height: 100px;
+    top: 15vh;
   }
 }
